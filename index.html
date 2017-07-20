@@ -12,6 +12,7 @@ body {
 }
 </style>
 <script type="text/javascript">
+//starting variables for game
 function play_game()
 {
 var level = 160; // Game level, by decreasing will speed up
@@ -56,8 +57,9 @@ map[x][y] = 1;
 ctx.fillStyle = snake_color;
 ctx.strokeRect(x * 10+1, y * 10+1, 8, 8);
 }
-// Default somewhere placement
+//random spawn
 rand_frog();
+//setting game speed for different modes
 function set_game_speed()
 {
 if (easy)
@@ -83,7 +85,7 @@ inc_score = 50;
 rand_frog();
 frog++;
 }
-//ctx.fillStyle("#ffffff");
+
 ctx.fillRect(X * 10, Y * 10, 9, 9);
 map[X][Y] = 2;
 queue.unshift([X, Y]);
